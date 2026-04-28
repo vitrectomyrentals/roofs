@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Areas Served | GTA Roofing Connect | Toronto Roofing Referral</title>
+<meta name="description" content="GTA Roofing Connect serves all of Toronto and the Greater Toronto Area including Scarborough, North York, Etobicoke, Mississauga, Brampton, Vaughan, Markham and more.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #C1231A;
+    --red-dark: #8B1612;
+    --red-light: #F5E8E7;
+    --charcoal: #1A1A1A;
+    --mid: #444;
+    --muted: #777;
+    --border: #E0DDD8;
+    --bg: #FAFAF8;
+    --white: #FFFFFF;
+    --yellow: #F5A623;
+    --ff-head: 'Bebas Neue', sans-serif;
+    --ff-body: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--ff-body);
+    background: var(--bg);
+    color: var(--charcoal);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--charcoal);
+    padding: 14px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid var(--red);
+    gap: 24px;
+  }
+
+  .nav-logo {
+    font-family: var(--ff-head);
+    font-size: 24px;
+    color: var(--white);
+    letter-spacing: 1px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .nav-logo span { color: var(--red); }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: #AAAAAA;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--white); }
+
+  .nav-cta {
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    padding: 10px 22px;
+    font-family: var(--ff-body);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+
+  .nav-cta:hover { background: var(--red-dark); }
+
+  .nav-burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .nav-burger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+  }
+
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    padding: 20px 5%;
+    gap: 16px;
+    border-bottom: 2px solid var(--red);
+  }
+
+  .nav-mobile a {
+    color: #AAAAAA;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .nav-mobile .nav-cta-mobile {
+    background: var(--red);
+    color: var(--white);
+    padding: 10px 18px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
+  .nav-mobile.open { display: flex; }
+
+  /* PAGE HERO */
+  .page-hero {
+    background: var(--charcoal);
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 30px, rgba(255,255,255,0.015) 30px, rgba(255,255,255,0.015) 31px);
+    padding: 72px 5% 64px;
+    position: relative;
+  }
+
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--red);
+  }
+
+  .page-hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .page-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .page-hero h1 {
+    font-family: var(--ff-head);
+    font-size: 64px;
+    line-height: 0.95;
+    color: var(--white);
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+  }
+
+  .page-hero p {
+    color: #AAAA9E;
+    font-size: 17px;
+    font-weight: 300;
+    max-width: 560px;
+    line-height: 1.7;
+  }
+
+  /* CONTENT */
+  .content-section {
+    padding: 72px 5%;
+  }
+
+  .content-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-family: var(--ff-head);
+    font-size: 48px;
+    line-height: 1;
+    color: var(--charcoal);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .section-sub {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 540px;
+    margin-bottom: 48px;
+  }
+
+  /* CTA BAND */
+  .cta-band {
+    background: var(--red);
+    padding: 64px 5%;
+    text-align: center;
+  }
+
+  .cta-band h2 {
+    font-family: var(--ff-head);
+    font-size: 52px;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .cta-band p {
+    color: rgba(255,255,255,0.75);
+    font-size: 17px;
+    margin-bottom: 32px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--white);
+    color: var(--red);
+    font-family: var(--ff-head);
+    font-size: 22px;
+    padding: 14px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: opacity 0.2s;
+  }
+
+  .cta-btn:hover { opacity: 0.92; }
+
+  /* FOOTER */
+  footer {
+    background: #111;
+    color: #888;
+    padding: 40px 5% 30px;
+    font-size: 13px;
+  }
+
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #222;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .footer-logo {
+    font-family: var(--ff-head);
+    font-size: 22px;
+    color: var(--white);
+    letter-spacing: 1px;
+  }
+
+  .footer-logo span { color: var(--red); }
+
+  .footer-disclaimer {
+    max-width: 600px;
+    font-size: 11.5px;
+    line-height: 1.8;
+    color: #555;
+  }
+
+  .footer-disclaimer strong { color: #777; font-weight: 600; }
+
+  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+
+  .footer-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--red); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-burger { display: flex; }
+    .page-hero h1 { font-size: 48px; }
+    .section-title { font-size: 38px; }
+  }
+
+  @media (max-width: 560px) {
+    .page-hero h1 { font-size: 36px; }
+    .cta-band h2 { font-size: 38px; }
+  }
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.area-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px 20px;
+  transition: border-color 0.2s, transform 0.2s;
+  cursor: default;
+}
+
+.area-card:hover {
+  border-color: var(--red);
+  transform: translateY(-2px);
+}
+
+.area-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.area-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--charcoal);
+  margin-bottom: 4px;
+}
+
+.area-sub {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.coverage-band {
+  background: var(--charcoal);
+  padding: 64px 5%;
+}
+
+.coverage-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.coverage-text h2 {
+  font-family: var(--ff-head);
+  font-size: 48px;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.coverage-text p {
+  color: #999;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.coverage-note {
+  background: #242424;
+  border: 1px solid #333;
+  border-left: 3px solid var(--red);
+  border-radius: 6px;
+  padding: 20px 24px;
+  font-size: 14px;
+  color: #888;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+  .coverage-inner { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 560px) {
+  .areas-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav>
+    <a class="nav-logo" href="/index.html">GTA <span>Roofing</span> Connect</a>
+    <div class="nav-links">
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/areas.html">Areas Served</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <a class="nav-cta" href="/index.html#quote">Get a Free Quote</a>
+    <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-mobile" id="navMobile">
+    <a href="/about.html">About</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/areas.html">Areas Served</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/index.html#quote" class="nav-cta-mobile">Get a Free Quote</a>
+  </div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-label">Coverage map</div>
+    <h1>We Cover the <span style="color:var(--red)">Whole</span> GTA</h1>
+    <p>From downtown Toronto to the outer suburbs — if you're in the Greater Toronto Area, we have a vetted local contractor who can reach you.</p>
+  </div>
+</div>
+
+<div class="content-section" style="background: var(--bg);">
+  <div class="content-inner">
+    <div class="section-label">Service area</div>
+    <div class="section-title">Cities &amp; Neighbourhoods</div>
+    <div class="section-sub" style="margin-bottom: 40px;">We connect homeowners across the GTA with local roofing contractors who know the area.</div>
+
+    <div class="areas-grid">
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">Toronto</div>
+        <div class="area-sub">Downtown, Midtown, East End, West End</div>
+      </div>
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">Scarborough</div>
+        <div class="area-sub">Agincourt, Malvern, Rouge, Birchcliffe</div>
+      </div>
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">North York</div>
+        <div class="area-sub">Willowdale, Don Mills, Bathurst Manor</div>
+      </div>
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">Etobicoke</div>
+        <div class="area-sub">Rexdale, Humber Valley, Long Branch</div>
+      </div>
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">Mississauga</div>
+        <div class="area-sub">Port Credit, Streetsville, Meadowvale</div>
+      </div>
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">Brampton</div>
+        <div class="area-sub">Bramalea, Heart Lake, Springdale</div>
+      </div>
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">Vaughan</div>
+        <div class="area-sub">Woodbridge, Maple, Thornhill</div>
+      </div>
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">Markham</div>
+        <div class="area-sub">Unionville, Cornell, Milliken Mills</div>
+      </div>
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">Richmond Hill</div>
+        <div class="area-sub">Oak Ridges, Langstaff, Jefferson</div>
+      </div>
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">Pickering</div>
+        <div class="area-sub">Bay Ridges, Rougemount, Dunbarton</div>
+      </div>
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">Ajax</div>
+        <div class="area-sub">Westney Heights, South Ajax, Nottingham</div>
+      </div>
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">Whitby</div>
+        <div class="area-sub">Downtown Whitby, Pringle Creek, Lynde Creek</div>
+      </div>
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">Oakville</div>
+        <div class="area-sub">Old Oakville, Glen Abbey, Uptown Core</div>
+      </div>
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">Burlington</div>
+        <div class="area-sub">Alton, Orchard, Millcroft</div>
+      </div>
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">Newmarket</div>
+        <div class="area-sub">Historic Downtown, Stonehaven, Summerhill</div>
+      </div>
+      <div class="area-card">
+        <div class="area-dot"></div>
+        <div class="area-name">Aurora</div>
+        <div class="area-sub">Aurora Village, Bayview Wellington, Leslie Valley</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COVERAGE NOTE -->
+<div class="coverage-band">
+  <div class="coverage-inner">
+    <div class="coverage-text">
+      <div class="section-label" style="color: var(--red);">Not sure?</div>
+      <h2>Don't See Your City?</h2>
+      <p>Our contractor network is always growing. If your city or neighbourhood isn't listed above, submit a request anyway — we'll do our best to find a local contractor who can reach you.</p>
+      <p>We're adding new areas regularly and may already have coverage you don't see here yet.</p>
+    </div>
+    <div>
+      <div class="coverage-note">
+        <strong style="color: #AAA; display: block; margin-bottom: 8px;">Coverage guarantee</strong>
+        If we can't find a contractor in your area, we'll let you know right away. We won't waste your time, and we'll never send a contractor from two hours away for a local job.
+      </div>
+      <a href="/index.html#quote" style="display: block; margin-top: 20px; background: var(--red); color: var(--white); text-align: center; padding: 14px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; transition: background 0.2s;" onmouseover="this.style.background='#8B1612'" onmouseout="this.style.background='#C1231A'">Submit Your Request &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<div class="cta-band">
+  <h2>Your Area Is Covered.</h2>
+  <p>Get connected with a vetted local roofer — free quote, no obligation</p>
+  <a class="cta-btn" href="/index.html#quote">Request a Free Quote</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">GTA <span>Roofing</span> Connect</div>
+        <div style="margin-top: 8px; font-size: 12px; color: #555;">Toronto, Ontario &middot; gtaroofs.com</div>
+      </div>
+      <div class="footer-disclaimer">
+        <strong>Important notice:</strong> GTA Roofing Connect is a <strong>roofing referral and lead generation service</strong> &mdash; not a roofing contractor. All work is performed by independent contractors. We are not liable for any damages or service outcomes.
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div style="color: #444; font-size: 12px;">&copy; 2025 GTA Roofing Connect. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="/about.html">About</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/areas.html">Areas Served</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('navMobile').classList.toggle('open');
+}
+</script>
+</body>
+</html>
