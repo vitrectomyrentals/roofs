@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toronto Roofing Experts | Get a Free Quote | GTA Roofs</title>
+<meta name="description" content="Get connected with vetted, insured local roofing contractors in Toronto. Free quotes, 24-hour response. GTA Roofs is a trusted roofing referral service.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #C1231A;
+    --red-dark: #8B1612;
+    --red-light: #F5E8E7;
+    --charcoal: #1A1A1A;
+    --mid: #444;
+    --muted: #777;
+    --border: #E0DDD8;
+    --bg: #FAFAF8;
+    --white: #FFFFFF;
+    --yellow: #F5A623;
+    --ff-head: 'Bebas Neue', sans-serif;
+    --ff-body: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--ff-body);
+    background: var(--bg);
+    color: var(--charcoal);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--charcoal);
+    padding: 14px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid var(--red);
+  }
+
+  .nav-logo {
+    font-family: var(--ff-head);
+    font-size: 24px;
+    color: var(--white);
+    letter-spacing: 1px;
+  }
+
+  .nav-logo span { color: var(--red); }
+
+  .nav-cta {
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    padding: 10px 22px;
+    font-family: var(--ff-body);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .nav-cta:hover { background: var(--red-dark); }
+
+  /* HERO */
+  .hero {
+    background: var(--charcoal);
+    background-image:
+      repeating-linear-gradient(
+        135deg,
+        transparent,
+        transparent 30px,
+        rgba(255,255,255,0.015) 30px,
+        rgba(255,255,255,0.015) 31px
+      );
+    padding: 90px 5% 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--red);
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-family: var(--ff-head);
+    font-size: 72px;
+    line-height: 0.95;
+    color: var(--white);
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 span { color: var(--red); }
+
+  .hero-sub {
+    color: #AAAA9E;
+    font-size: 17px;
+    font-weight: 300;
+    max-width: 480px;
+    margin-bottom: 36px;
+    line-height: 1.7;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 36px;
+  }
+
+  .stat {
+    border-left: 2px solid var(--red);
+    padding-left: 14px;
+  }
+
+  .stat-num {
+    font-family: var(--ff-head);
+    font-size: 36px;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  /* HERO FORM CARD */
+  .hero-form {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 36px 32px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+  }
+
+  .form-title {
+    font-family: var(--ff-head);
+    font-size: 28px;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+  }
+
+  .form-sub {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 22px;
+  }
+
+  .form-group {
+    margin-bottom: 14px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--mid);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 5px;
+    font-family: var(--ff-body);
+    font-size: 15px;
+    color: var(--charcoal);
+    background: var(--white);
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: var(--red);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    padding: 15px;
+    font-family: var(--ff-body);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 8px;
+    transition: background 0.2s, transform 0.1s;
+    letter-spacing: 0.3px;
+  }
+
+  .btn-submit:hover { background: var(--red-dark); }
+  .btn-submit:active { transform: scale(0.99); }
+
+  .form-disclaimer {
+    font-size: 11px;
+    color: #AAA;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  /* TRUST BAR */
+  .trust-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 5%;
+  }
+
+  .trust-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--mid);
+    font-weight: 500;
+  }
+
+  .trust-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--red);
+    flex-shrink: 0;
+  }
+
+  /* HOW IT WORKS */
+  .section {
+    padding: 80px 5%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-family: var(--ff-head);
+    font-size: 52px;
+    line-height: 1;
+    color: var(--charcoal);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .section-sub {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 540px;
+    margin-bottom: 56px;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+
+  .steps-grid::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 12%;
+    right: 12%;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .step {
+    text-align: center;
+    padding: 0 16px;
+    position: relative;
+  }
+
+  .step-num {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--charcoal);
+    color: var(--white);
+    font-family: var(--ff-head);
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    position: relative;
+    z-index: 1;
+    border: 3px solid var(--white);
+    outline: 2px solid var(--border);
+  }
+
+  .step:first-child .step-num { background: var(--red); outline-color: var(--red-light); }
+
+  .step-title {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: var(--charcoal);
+  }
+
+  .step-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* SERVICES */
+  .services-section {
+    background: var(--charcoal);
+    padding: 80px 5%;
+  }
+
+  .services-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .services-inner .section-title { color: var(--white); }
+  .services-inner .section-label { color: var(--red); }
+  .services-inner .section-sub { color: #888; }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .service-card {
+    background: #242424;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 28px 24px;
+    transition: border-color 0.2s, transform 0.2s;
+    cursor: default;
+  }
+
+  .service-card:hover {
+    border-color: var(--red);
+    transform: translateY(-2px);
+  }
+
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .service-icon svg { width: 20px; height: 20px; fill: var(--white); }
+
+  .service-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .service-desc {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.6;
+  }
+
+  /* REVIEWS */
+  .reviews-section {
+    padding: 80px 5%;
+    background: var(--white);
+  }
+
+  .reviews-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 0;
+  }
+
+  .review-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 12px;
+  }
+
+  .star {
+    width: 14px;
+    height: 14px;
+    fill: var(--yellow);
+  }
+
+  .review-text {
+    font-size: 14px;
+    color: var(--mid);
+    line-height: 1.7;
+    margin-bottom: 18px;
+    font-style: italic;
+  }
+
+  .reviewer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .reviewer-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--red-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--red);
+    flex-shrink: 0;
+  }
+
+  .reviewer-name {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--charcoal);
+  }
+
+  .reviewer-loc {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* CTA BAND */
+  .cta-band {
+    background: var(--red);
+    padding: 64px 5%;
+    text-align: center;
+  }
+
+  .cta-band h2 {
+    font-family: var(--ff-head);
+    font-size: 56px;
+    color: var(--white);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .cta-band p {
+    color: rgba(255,255,255,0.75);
+    font-size: 17px;
+    margin-bottom: 32px;
+  }
+
+  .cta-phone {
+    display: inline-block;
+    background: var(--white);
+    color: var(--red);
+    font-family: var(--ff-head);
+    font-size: 42px;
+    padding: 14px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: opacity 0.2s;
+  }
+
+  .cta-phone:hover { opacity: 0.92; }
+
+  .cta-note {
+    color: rgba(255,255,255,0.55);
+    font-size: 13px;
+    margin-top: 16px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #111;
+    color: #888;
+    padding: 40px 5% 30px;
+    font-size: 13px;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #222;
+    gap: 40px;
+  }
+
+  .footer-logo {
+    font-family: var(--ff-head);
+    font-size: 22px;
+    color: var(--white);
+    letter-spacing: 1px;
+  }
+
+  .footer-logo span { color: var(--red); }
+
+  .footer-disclaimer {
+    max-width: 600px;
+    font-size: 11.5px;
+    line-height: 1.8;
+    color: #555;
+  }
+
+  .footer-disclaimer strong {
+    color: #777;
+    font-weight: 600;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--red); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+  .nav-links a {
+    color: #AAAAAA;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .nav-burger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; }
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    padding: 20px 5%;
+    gap: 16px;
+    border-bottom: 2px solid var(--red);
+    position: sticky;
+    top: 51px;
+    z-index: 99;
+  }
+  .nav-mobile a { color: #AAAAAA; text-decoration: none; font-size: 15px; font-weight: 500; }
+  .nav-mobile.open { display: flex; }
+
+  /* TOAST */
+  #toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--charcoal);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 6px;
+    border-left: 4px solid var(--red);
+    font-size: 15px;
+    font-weight: 500;
+    z-index: 9999;
+    transition: transform 0.4s ease;
+    white-space: nowrap;
+  }
+
+  #toast.show { transform: translateX(-50%) translateY(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-burger { display: flex; }
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 52px; }
+    .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+    .steps-grid::before { display: none; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .footer-top { flex-direction: column; }
+  }
+
+  @media (max-width: 560px) {
+    .hero h1 { font-size: 40px; }
+    .section-title { font-size: 38px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .trust-inner { gap: 16px; }
+    .hero-stats { gap: 20px; }
+    .cta-band h2 { font-size: 40px; }
+    .cta-phone { font-size: 30px; padding: 12px 24px; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav>
+  <a class="nav-logo" href="/index.html">GTA <span>Roofs</span></a>
+  <div class="nav-links">
+    <a href="/about.html">About</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/areas.html">Areas Served</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+  <a class="nav-cta" href="#quote">Get a Free Quote</a>
+  <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="/about.html">About</a>
+  <a href="/faq.html">FAQ</a>
+  <a href="/areas.html">Areas Served</a>
+  <a href="/contact.html">Contact</a>
+  <a href="#quote" style="background:var(--red);color:var(--white);padding:10px 18px;border-radius:4px;text-align:center;font-weight:600;margin-top:4px;">Get a Free Quote</a>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">Toronto's Trusted Roofing Referral Service</div>
+      <h1>Get Your Roof <span>Fixed</span> By A Vetted Local Pro</h1>
+      <p class="hero-sub">We connect Toronto homeowners with fully insured, WSIB-covered roofing contractors — fast. You get a free quote, we handle the matchmaking. No stress, no runaround.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">900+</div>
+          <div class="stat-label">Referrals made</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">48hr</div>
+          <div class="stat-label">Average response</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">GTA</div>
+          <div class="stat-label">Wide coverage</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEAD FORM -->
+    <div class="hero-form" id="quote">
+      <div class="form-title">Free Quote Request</div>
+      <div class="form-sub">A local roofing specialist will call you within 24 hours</div>
+
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="name" placeholder="John Smith">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" id="phone" placeholder="(416) 555-0100">
+        </div>
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" id="city" placeholder="Toronto">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Roofing Need</label>
+        <select id="service">
+          <option value="">Select one...</option>
+          <option>Emergency leak repair</option>
+          <option>Full roof replacement</option>
+          <option>Shingle repair</option>
+          <option>Flat roof installation</option>
+          <option>Inspection &amp; assessment</option>
+          <option>Eavestrough / gutters</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <button class="btn-submit" onclick="submitForm()">Request My Free Quote &rarr;</button>
+      <div class="form-disclaimer">By submitting, you agree to be connected with an independent local roofing contractor. We are a referral service &mdash; not a roofing company.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== TRUST BAR ===================== -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      All contractors carry liability insurance
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      WSIB-covered contractors
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      Specialist calls you within 24 hours
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z"/></svg>
+      Free, no-obligation quotes
+    </div>
+    <div class="trust-item">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      Serving all GTA neighbourhoods
+    </div>
+  </div>
+</div>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<div style="padding: 80px 5%; background: var(--bg);">
+  <div class="section" style="padding: 0;">
+    <div class="section-label">Simple process</div>
+    <div class="section-title">How It Works</div>
+    <div class="section-sub">We take the legwork out of finding a reliable roofer. Here's what happens after you submit your request.</div>
+
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Submit your request</div>
+        <div class="step-desc">Fill out the form with your name, phone number, and what your roof needs. Takes 60 seconds.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">We match you</div>
+        <div class="step-desc">We connect you with a vetted local roofing contractor who covers your area and specialises in your job type.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">Specialist calls you</div>
+        <div class="step-desc">A local roofing specialist contacts you within 24 hours to discuss your needs and arrange a site visit.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">You get a free quote</div>
+        <div class="step-desc">The contractor assesses the job and provides a written quote. You decide — no pressure, no obligation.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SERVICES ===================== -->
+<div class="services-section">
+  <div class="services-inner">
+    <div class="section-label">What we refer</div>
+    <div class="section-title">Roofing Services Covered</div>
+    <div class="section-sub">Our network of Toronto roofing contractors handles all types of residential and commercial roofing work.</div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        </div>
+        <div class="service-name">Emergency leak repair</div>
+        <div class="service-desc">Fast response for active leaks, storm damage, and urgent repairs that can't wait.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        </div>
+        <div class="service-name">Full roof replacement</div>
+        <div class="service-desc">Complete teardown and re-roofing for aged or severely damaged residential roofs.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        </div>
+        <div class="service-name">Flat &amp; commercial roofing</div>
+        <div class="service-desc">TPO, EPDM, and modified bitumen for flat roofs on homes and commercial properties.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div class="service-name">Shingle repair &amp; replacement</div>
+        <div class="service-desc">Asphalt shingle repairs, partial replacements, and full re-shingling for pitched roofs.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+        </div>
+        <div class="service-name">Roof inspection</div>
+        <div class="service-desc">Pre-sale, insurance, or maintenance inspections with written reports from licensed contractors.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+        </div>
+        <div class="service-name">Eavestrough &amp; gutters</div>
+        <div class="service-desc">Gutter installation, cleaning, repair, and leaf guard systems for complete water management.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== REVIEWS ===================== -->
+<div class="reviews-section">
+  <div class="reviews-inner">
+    <div class="section-label">What homeowners say</div>
+    <div class="section-title">Toronto Homeowners Trust Us</div>
+    <div class="section-sub" style="margin-bottom: 36px;">Real feedback from GTA homeowners we've connected with local roofing pros.</div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <div class="review-text">"Had a leak above my bedroom and didn't know who to call. Filled out the form on Sunday night and had a contractor calling me by Monday morning. The referral was fast and the roofer they connected me with was professional."</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">MK</div>
+          <div>
+            <div class="reviewer-name">Mike K.</div>
+            <div class="reviewer-loc">North York, Toronto</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <div class="review-text">"Really appreciated that they were upfront — they're a referral service, not the roofers themselves. The contractor they matched me with arrived on time, gave a fair quote, and the work was done in one day."</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">SL</div>
+          <div>
+            <div class="reviewer-name">Sandra L.</div>
+            <div class="reviewer-loc">Scarborough, Toronto</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="star" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <div class="review-text">"Used them after my neighbour recommended the service. They connected me with a local contractor for a full flat roof replacement on my triplex. Smooth process, fair pricing, solid work."</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">RP</div>
+          <div>
+            <div class="reviewer-name">Raj P.</div>
+            <div class="reviewer-loc">Etobicoke, Toronto</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CTA BAND ===================== -->
+<div class="cta-band">
+  <h2>Need a Roofer Fast?</h2>
+  <p>Call now and we'll match you with a local specialist within hours</p>
+  <!-- TODO: Replace with your real tracking number (e.g. CallRail) -->
+  <a class="cta-phone" href="tel:+14165550100">(416) 555-0100</a>
+  <div class="cta-note">Available Mon&ndash;Fri 8am&ndash;7pm &middot; Emergency lines available</div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">GTA <span>Roofs</span></div>
+        <div style="margin-top: 8px; font-size: 12px; color: #555;">Toronto, Ontario &middot; GTARoofingConnect.ca</div>
+      </div>
+      <div class="footer-disclaimer">
+        <strong>Important notice:</strong> GTA Roofs is a <strong>roofing referral and lead generation service</strong> &mdash; not a roofing contractor. We connect homeowners with independent, third-party roofing contractors. All work is performed by, and is the sole responsibility of, those independent contractors. We make no representations or warranties regarding the quality, safety, or outcome of any work performed. We are not liable for any damages, injuries, delays, or disputes arising from services provided by contractors in our network. By submitting a quote request, you agree to our <a href="/terms" style="color: var(--red); text-decoration: none;">Terms of Service</a> and <a href="/privacy" style="color: var(--red); text-decoration: none;">Privacy Policy</a>.
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div style="color: #444; font-size: 12px;">&copy; 2025 GTA Roofs. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="/terms">Terms of Service</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/contractor-agreement">Contractor Agreement</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="toast">Your request has been received &mdash; a specialist will call you shortly.</div>
+
+<script>
+  // =====================================================
+  // FORM SUBMISSION
+  // Replace the body of this function with your actual
+  // form handler (e.g. Zapier webhook, GoHighLevel, etc.)
+  // =====================================================
+  function toggleMenu() {
+    document.getElementById('navMobile').classList.toggle('open');
+  }
+
+  function submitForm() {
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const city = document.getElementById('city').value.trim();
+    const service = document.getElementById('service').value;
+
+    if (!name || !phone || !service) {
+      alert('Please fill in your name, phone number, and roofing need.');
+      return;
+    }
+
+    // TODO: POST to your webhook or CRM here
+    // Example (Zapier / Make / GoHighLevel):
+    //
+    // fetch('https://hooks.zapier.com/hooks/catch/YOUR_HOOK_ID/', {
+    //   method: 'POST',
+    //   body: JSON.stringify({ name, phone, city, service }),
+    //   headers: { 'Content-Type': 'application/json' }
+    // });
+
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4000);
+
+    document.getElementById('name').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('city').value = '';
+    document.getElementById('service').value = '';
+  }
+</script>
+
+</body>
+</html>
