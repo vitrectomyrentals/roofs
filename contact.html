@@ -730,18 +730,34 @@ function submitContact() {
     return;
   }
 
-  // TODO: POST to your webhook or email handler here
-
-  const toast = document.getElementById('toast');
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 4000);
-
-  document.getElementById('firstName').value = '';
-  document.getElementById('lastName').value = '';
-  document.getElementById('email').value = '';
-  document.getElementById('phone').value = '';
-  document.getElementById('subject').value = '';
-  document.getElementById('message').value = '';
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      access_key: '23f8d6e0-8acf-43ca-915c-2c48a6475c46',
+      subject: 'New Contact Message - GTA Roofs',
+      name: firstName + ' ' + document.getElementById('lastName').value.trim(),
+      email: email,
+      phone: document.getElementById('phone').value.trim(),
+      inquiry: subject,
+      message: message
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 4000);
+      document.getElementById('firstName').value = '';
+      document.getElementById('lastName').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('phone').value = '';
+      document.getElementById('subject').value = '';
+      document.getElementById('message').value = '';
+    }
+  })
+  .catch(() => alert('Something went wrong. Please email us directly.'));
 }
 </script>
 </body>
